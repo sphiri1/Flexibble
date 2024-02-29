@@ -4,6 +4,7 @@ import './global.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { AuthContextProvider } from '@/components/AuthContext';
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   title: 'Flexibble',
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Navbar />
         <main>
           {children}
+          <Analytics />
         </main>
         <Footer />
         </AuthContextProvider>
